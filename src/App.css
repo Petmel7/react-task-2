@@ -74,10 +74,12 @@ img {
 
 .SearchForm-button {
   display: inline-block;
-  width: 48px;
-  height: 48px;
+  /* width: 48px;
+  height: 48px; */
+  margin: 0;
+  padding: 7px 10px;
   border: 0;
-  background-image: url('https://image.flaticon.com/icons/svg/149/149852.svg');
+  /* background-image: url('https://image.flaticon.com/icons/svg/149/149852.svg'); */
   background-size: 40%;
   background-repeat: no-repeat;
   background-position: center;
@@ -101,6 +103,19 @@ img {
   white-space: nowrap;
   clip-path: inset(50%);
   border: 0;
+}
+
+.SearchForm-icon {
+  padding: 0;
+  margin: 0;
+  width: 20px;
+  height: 20px;
+  fill: #333;
+  transition: fill 0.3s ease;
+}
+
+.SearchForm-icon:hover {
+  fill: #ff9900;
 }
 
 .SearchForm-input {
@@ -170,7 +185,7 @@ img {
   justify-content: center;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.8);
-  z-index: 1200;
+  /* z-index: 1200; */
 }
 
 .Modal {
@@ -181,7 +196,12 @@ img {
 /*
 * Стили компонента Buton (Load more)
 */
-.Button {
+/* Button {
+display: flex;
+justify-content: center;
+} */
+
+.Button-more {
   padding: 8px 16px;
   border-radius: 2px;
   background-color: #3f51b5;

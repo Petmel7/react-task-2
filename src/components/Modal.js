@@ -1,8 +1,6 @@
 import { Component } from "react";
 //! Для модалкі замість z-index в react
 import { createPortal } from "react-dom";
-// import './Modal.css';
-
 //! Для модалкі замість z-index в react
 const modalRoot = document.querySelector('#modal-root');
 
@@ -25,11 +23,6 @@ export default class Modal extends Component {
         window.removeEventListener('keydown', this.handleKeyDown);
 }
 
-    // componentDidUpdate(prevProps, prevState) {
-    //     console.log('Modal componentDidUpdate')
-
-    // }
-
     handleBackdropClick = event => {
         console.log('Клікнули в бекдроп')
         console.log(event.currentTarget)
@@ -42,10 +35,10 @@ export default class Modal extends Component {
     
     render() {
         return createPortal (
-            <div className="Modal-backgdrop"
+            <div className="Overlay"
                 onClick={this.handleBackdropClick}>
                 
-                <div className="Modal-content">
+                <div className="Modal">
                     {this.props.children}
                 </div>
             </div>,
