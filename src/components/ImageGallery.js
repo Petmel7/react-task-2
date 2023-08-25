@@ -2,21 +2,21 @@
 
 const ImageGallery = ({ images }) => {
     // const imageList = images.hits;
-    console.log(images);
+    // console.log(images);
     // return (
-    //     <ul className="gallery">
-    //         {images.hits.map(image => (
-    //             <li className="gallery-item" key={image.id}>
-    //                 <img
-    //                     // key={image.id}
-    //                     src={image.pageURL}
-    //                     alt={image.tags}
-    //                     className="image"
-    //                 />
-    //             </li>
-    //         ))}
-    //     </ul>
-    // )
+    //             <ul className="gallery">
+    //                 {images.map(image => (
+    //                     <li className="gallery-item" key={image.id}>
+    //                         <img
+    //                             src={image.largeImageURL}
+    //                             alt={image.tags}
+    //                             className="image"
+    //                         />
+    //                     </li>
+    //                 ))}
+    //             </ul>
+    //         );
+    
 }
 
 
