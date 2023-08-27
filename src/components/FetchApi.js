@@ -9,13 +9,13 @@ export default class FetchApi extends Component {
     }
 
     componentDidUpdate(prevProps, prevState) {
-        const prevName = prevProps.pokemonName;
-        const nextName = this.props.pokemonName;
+        const prevSearchImage = prevProps.SearchImage;
+        const nextSearchImage = this.props.SearchImage;
 
-        if (prevName !== nextName) {
+        if (prevSearchImage !== nextSearchImage) {
             this.setState({ status: 'pending', page: 1 });
 
-            this.fetchImages(nextName, 1);
+            this.fetchImages(nextSearchImage, 1);
         }
     }
 
@@ -40,10 +40,10 @@ export default class FetchApi extends Component {
     }
 
     handleLoadMore = () => {
-        const { pokemonName } = this.props;
+        const { SearchImage } = this.props;
         const nextPage = this.state.page + 1;
 
-        this.fetchImages(pokemonName, nextPage);
+        this.fetchImages(SearchImage, nextPage);
         this.setState(prevState => ({
             page: nextPage
         }));

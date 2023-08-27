@@ -1,5 +1,6 @@
 import './App.css';
 import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { Component } from 'react';
 import Searchbar from './components/Searchbar.js';
 import Modal from './components/Modal.js';
@@ -9,12 +10,12 @@ class App extends Component {
 
   state = {
     showModal: false,
-    pokemonName: '',
+    SearchImage: '',
     imageUrl: '',
   }
 
-  handleFormSubmit = pokemonName => {
-    this.setState({ pokemonName });
+  handleFormSubmit = SearchImage => {
+    this.setState({ SearchImage });
   }
 
   toggleModal = imageUrl => {
@@ -26,7 +27,7 @@ class App extends Component {
 
   handleKeyPress = (event) => {
     if (event.key === "Enter") {
-      this.handleFormSubmit(this.state.pokemonName);
+      this.handleFormSubmit(this.state.SearchImage);
     }
   }
 
@@ -42,7 +43,7 @@ class App extends Component {
       <ToastContainer autoClose={3000} />
 
       <FetchApi
-        pokemonName={this.state.pokemonName}
+        SearchImage={this.state.SearchImage}
         onClick={this.toggleModal} />
         
         {showModal && (

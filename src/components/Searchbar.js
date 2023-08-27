@@ -3,24 +3,25 @@ import { toast } from 'react-toastify';
 import { ImSearch } from "react-icons/im";
 
 export default class Searchbar extends Component {
+
     state = {
-        pokemonName: '',
+        SearchImage: '',
     }
     
     handleNameChnge = event => {
-        this.setState({ pokemonName: event.currentTarget.value.toLowerCase() });
+        this.setState({ SearchImage: event.currentTarget.value.toLowerCase() });
     }
 
     handleSubmit = event => {
         event.preventDefault();
 
-        if (this.state.pokemonName.trim() === '') {
-            toast('Введіть імя Pokemona')
+        if (this.state.SearchImage.trim() === '') {
+            toast('Введіть щось у пошук')
             return;
         }
 
-        this.props.handleFormSubmit(this.state.pokemonName);
-        this.setState({ pokemonName: '' });
+        this.props.handleFormSubmit(this.state.SearchImage);
+        this.setState({ SearchImage: '' });
     }
 
     render() {
@@ -39,7 +40,7 @@ export default class Searchbar extends Component {
                     autoComplete="off"
                     autoFocus
                     placeholder="Search images and photos"
-                        value={this.state.pokemonName}
+                        value={this.state.SearchImage}
                         onChange={this.handleNameChnge}
                         onKeyPress={handleKeyPress}
                     />

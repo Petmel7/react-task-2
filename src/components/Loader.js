@@ -10,9 +10,9 @@ const styles = {
   },
 };
 
-export default function PokemonPendingViev({ pokemonName }) {
+export default function PokemonPendingViev({ SearchImage }) {
     const pokemon = {
-        name: pokemonName,
+        name: SearchImage,
         sprites: {
             other: {
                 'official-artwork': {
