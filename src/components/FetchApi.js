@@ -58,7 +58,7 @@ export default class FetchApi extends Component {
         }
         if (status === 'resolved') {
             return (
-                <div>
+                <div className="Container">
                     <ul className="ImageGallery">
                         {images.map(image => (
                             <li className="ImageGalleryItem" key={image.id}>
@@ -71,11 +71,13 @@ export default class FetchApi extends Component {
                             </li>
                         ))}
                     </ul>
-                    {images.length > 0 && (
+                    <div className="Button">
+                        {images.length > 0 && (
                         <button className="Button-more" onClick={this.handleLoadMore}>
                             Load more
                         </button>
                     )}
+                    </div>
                 </div>
             );
         }
